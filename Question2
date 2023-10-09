@@ -1,0 +1,38 @@
+//Prompt  the user to enter their guess for the generated numbers.
+package Pack1;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Question2 {
+
+	public static void main(String[] args) {
+//		 generate a random number 0 to 99
+		Random rr=new Random();
+		 int number=rr.nextInt(100); 
+		 System.out.println(number);
+		Scanner sc= new Scanner(System.in);
+		System.out.println(" I am guess the number between 0 to 99.");
+		System.out.println("You have 6 tries to guess the numbers :");
+		System.out.println("");
+		int num=6;
+		while(num>0){
+			System.out.println("Enter your Guess :");
+			int guess=sc.nextInt();
+			if (guess==number) {
+				System.out.println("you guess the number \n you are win And your Total attempt :"+(6-num)+".");
+				break;
+			}
+			else if(guess>number) {
+				System.out.println(" your guess is high.\n "+(num-1)+"Tries left");
+				--num;
+			}
+           else if(guess<number) {
+        	   System.out.println(" your guess is  low.\n "+(num-1)+"Tries left");	
+        	   --num;
+			}
+		}
+
+	}
+
+}
