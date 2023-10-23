@@ -2,7 +2,7 @@ package Pack1;
 
 import java.util.Scanner;
 //Student Grade Calculator
-public class Class2 {
+public class Task2 {
       public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 //		Take marks Obtained (out of 100) in each Subject
